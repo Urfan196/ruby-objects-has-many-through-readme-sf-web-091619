@@ -19,11 +19,11 @@ attr_accessor :name, :age
   end
 
   def meals
-    new_meal.map {|meal| meal.customer == self}
+    new_meal.select {|meal| meal.customer == self}
   end
 
   def waiters
-   new_meal.map {|meal| meal.waiters}
+   meals.map {|meal| meal.waiters}
   end
 
 end
