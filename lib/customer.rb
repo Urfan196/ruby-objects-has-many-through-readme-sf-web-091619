@@ -14,4 +14,16 @@ attr_accessor :name, :age
     @@all
   end
 
+  def new_meal
+    Meal.all.select {|meal| meal.customer == self}
+  end
+
+  def meals
+    new_meal.map {|meal| meal.meal}
+  end
+
+  def method_name
+
+  end
+
 end
