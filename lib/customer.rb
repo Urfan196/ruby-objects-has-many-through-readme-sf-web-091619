@@ -14,8 +14,8 @@ attr_accessor :name, :age
     @@all
   end
 
-  def new_meal
-    Meal.all.select {|meal| meal.customer == self}
+  def new_meal(customer, total, tip=0)
+    Meal.new(waiter, self, total, tip)
   end
 
   def meals
