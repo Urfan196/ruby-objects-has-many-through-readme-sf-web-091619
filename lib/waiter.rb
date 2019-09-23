@@ -20,7 +20,7 @@ attr_accessor :name, :years
   end
 
   def meals
-    new_meal.select {|meal| meal.waiter == self}
+    Meal.all.select {|meal| meal.waiter == self}
   end
 
   def best_tipper
