@@ -22,8 +22,8 @@ attr_accessor :name, :age
     new_meal.map {|meal| meal.meal}
   end
 
-  def method_name
-
+  def waiters
+   new_meal.map {|meal| meal.waiters}
   end
 
 end
